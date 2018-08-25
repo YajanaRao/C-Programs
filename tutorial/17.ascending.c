@@ -1,50 +1,46 @@
-/* printing n numbers in ascending order */
+/******************************************************************************
 
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
 #include <stdio.h>
 
-int
-main ()
+int main()
 {
-
-//code
-
-  int i, j, a, m, num[10];
-
-  printf ("Enter the value of m \n");
-
-  scanf ("%d", &m);
-
-  printf ("Enter the num");
-
-  for (i = 0; i < m; ++i)
-    {
-      scanf ("%d", &num[i]);
+    int num[100],size,i,sorted[100];
+    
+    printf("Enter no of elements :");
+    scanf("%d",&size);
+    
+    for(i=0;i<size;i++){
+        scanf("%d",&num[i]);
     }
-
-  for (i = 0; i < m; ++i)
-    {
-      for (j = i + 1; j < m; ++j)
-	{
-
-	  if (num[i] > num[j])
-	    {
-	      a = num[i];
-	      num[i] = num[j];
-	      num[j] = a;
-	    }
-
-	}
-    }
-
-
-  printf ("Numbers in ascending order are:\n");
-
-  for (i = 0; i < m; ++i)
-    {
-      printf ("%d\t", num[i]);
-    }
-
-  return 0;
+    
+    sorted = ascending(num);
+    return 0;
 }
 
+int * ascending(int num[]){
+    int i,j,large;
+    int size = 4;
+    
+    for (i=0;i<size;i++){
+        for(j=i+1;j<size;j++){
+            if(num[i]>num[j]){
+                //printf("%d",num[i]);
+                large = num[j];
+                num[j] = num[i];
+                num[i] = large;
+            }
+        }
+    }
+    
+    for(i=0;i<size;i++){
+        printf("%d",num[i]);
+    }
 
+    return num;
+}
