@@ -29,6 +29,10 @@ void drawcircle(int r){
 
 int main()
 {
+    int radius;
+    printf("Enter the radius of the circle : ");
+    scanf("%d",&radius);
+    printf("\n");
     drawcircle(8);
 
     return 0;
