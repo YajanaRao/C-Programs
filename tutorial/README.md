@@ -4,4 +4,4 @@
 
       
     
-![alt text](https://raw.githubusercontent.com/YajanaRao/C-Programs/master/tutorial/quadratic-equation-roots.jpg)
+![alt text](https://raw.githubusercontent.com/YajanaRao/C-Programs/master/tutorial/supliments/quadratic-equation-roots.jpg)
