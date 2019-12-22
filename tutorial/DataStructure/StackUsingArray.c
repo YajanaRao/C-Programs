@@ -1,37 +1,35 @@
 #include <stdio.h> 
 #include <stdlib.h>
 
-struct node { 
-	int top; 
-	int data[100]; 
-} stack;
+int top=-1; 
+int data[100]; 
 
-void push(int data){
-    if(stack.top != 99){
-        stack.data[++stack.top] = data; 
+void push(int value){
+    if(top != 99){
+        data[++top] = value; 
     }else {
-        printf("Stack is full");
+        printf("Stack is full\n");
     }
 
 }
 
 int pop(){
-    if(stack.top == 0){
-        printf("Stack is empty");
+    if(top == -1){
+        printf("Stack is empty\n");
     }else {
-        return stack.data[stack.top--];
+        return data[top--];
     }
 }
 void list(){
     int i;
-    for(i=0;i<=stack.top;i++){
-        printf("%d\n", stack.data[i]);
+    for(i=0;i<=top;i++){
+        printf("%d\n", data[i]);
     }
 }
 
 int main() 
 { 
-	stack.top = -1;
+	pop();
 	push(2);
 	push(3);
 	list();
