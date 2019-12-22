@@ -1,8 +1,6 @@
 #include <stdio.h> 
 #include <stdlib.h>
 
-int length=2;
-
 struct node { 
 	int data; 
 	struct node* link; 
